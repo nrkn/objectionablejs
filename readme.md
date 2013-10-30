@@ -5,21 +5,33 @@ objectionable-js
 example code 
 */
 
+//interfaces like static languages but duck testing + primitives, enums etc.
 var interfaces = {
+  //properties are primitives
   Point: {
     x: 'Number',
     y: 'Number'
   },  
+  
+  //properties are interfaces
   Line: {
     start: 'Point',
     end: 'Point'
   },
+  
+  //you can mix properties as primitives/interfaces, example elided for tersity
+  
+  //enum
   Color: [ 
     'red', 
     'green', 
     'blue' 
   ],
+  
+  //extending primative
   HexColor: 'String',
+  
+  //alt syntax for point as used by jQuery et al.
   Position: {
     left: 'Number',
     top: 'Number'
@@ -27,6 +39,7 @@ var interfaces = {
 };
 
 var mixins = {
+  //mixin on primitive
   Number: {
     square: function( num ){
       return num * num;
@@ -35,6 +48,7 @@ var mixins = {
       return num + value;
     }
   },
+  //mixin on interface
   Point: {
     square: function( point ){
       return {
@@ -43,6 +57,7 @@ var mixins = {
       };
     }
   },
+  //mixin with same name as existing mixins but on specific interface
   Line: {
     square: function( line ){
       return {
