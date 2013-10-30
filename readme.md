@@ -1,3 +1,4 @@
+```javascript
 /*
 objectionable-js
 */
@@ -189,3 +190,4 @@ if( window && jQuery ){
   //probably it's 0,0
   console.log( _( point4 ).toPoint() ); // { x: 0, y: 0 } 
 }
+```
