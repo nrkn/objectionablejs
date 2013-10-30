@@ -1,6 +1,8 @@
 ```javascript
 /*
 objectionable-js
+
+example code 
 */
 
 var interfaces = {
@@ -184,7 +186,7 @@ try {
 
 //mixin on third party object
 if( window && jQuery ){
-  //offset return value from jQuery matches interface Position which has a mapping to Point:
+  //offset method return value matches interface Position which maps to Point:
   var point4 = _( jQuery( 'html' ).offset() ).toPoint();
   
   //probably it's 0,0
